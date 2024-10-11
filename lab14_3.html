@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="profile" id="profile">
+        <div class="notify">
+            <p>1</p>
+        </div>
+    </div>
+    <h1 id="user">Alphaca's Phone book</h1>
+    <label>Set username</label><input type="text" id="name"><button onclick="setName()">set</button>
+    <p></p>
+    <label>Set Image</label><input type="text" id="input2"><button onclick="setImg()">set</button>
+    <p></p>
+    <!-- <label>Add Para</label><input type="text" id="input3"><button onclick="addParagraph()">add</button> -->
+
+    <div class="container">
+
+    </div>
+    <input type="text" id="addName" placeholder="name">
+    <input type="text"id ="addTel" placeholder="tel">
+    <button onclick="addContact()">add</button>
+    <label></label><button onclick="saveCSV()">Export</button>
+    <table>
+        <thead>
+            <tr>
+            <th width="35%">No.</th>
+            <th  width="35%">name</th>
+            <th  width="30%">phone</th>
+            </tr>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    lk,lkkk
+                </td>
+                <td>
+                    999999
+                </td>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+
+        </tbody>
+    </table>
+    <div class="datalist">
+
+    </div>
+
+    <script>
+        const username = document.getElementById("user");
+        const input = document.getElementById("name");
+        const input2 = document.getElementById("input2")
+        const input3 = document.getElementById("input3")
+        const profile = document.getElementById("profile");
+        const newdiv = document.getElementsByClassName("container")[0];
+
+        function setName() {
+            username.textContent = input.value + "'s Phone book";
+            input.value = "";
+        }
+        function setImg() {
+            profile.style.backgroundImage = "url(" + input2.value + ")";
+            console.log(input2.value);
+            input2.value = "";
+        }
+        function addParagraph() {
+            const newpara = document.createElement("p");
+            newpara.textContent = input3.value;
+            newdiv.appendChild(newpara);
+            input3.value = ""
+        }
+        function addContact(){
+            addname = document.getElementById("addName")
+            addTel = document.getElementById("addTel")
+            myTable = document.getElementById("my-table")
+            template = "<tr>\
+                <td>\
+                    " + (currentNo + 1) + "\
+                </td>\
+                <td>\
+                    " + addName.value + "\
+                </td>\
+                <td>\
+                    " + addTel.value + "\
+                </td>\
+            </tr>"
+            currentInfo.push( {No: currentNo + 1 , Name : addName.value , Phone : addTel.value})
+            currentNo += 1
+            myTable.innerHTML = myTable.innerHTML + template
+        }
+
+        function addRow() {
+            const row = document.createElement9(tr)
+            const cell1 = document.getElementById("input-name")
+            const cell2 = document.getElementById("profile")
+            cell1.txtContent = ""
+            cdll2.txtContent = ""
+            row.appendChild(cell1);
+            row.appendChild(cell2)
+            table.appendChild(row);
+        }
+        function convertToCSV(arr) {
+            let array = [Object.keys(arr[0])].concat(arr)
+            return array.map(it => {
+                const temp = Object.values(it).map((Text)=>`"${text}"`)
+                return temp.toString()
+            }).join('\n')
+        }
+        function exportCSV(){
+            let data = "data:text/csv;chatset=utf-8,"+convertToCSV(currentInfo)
+            let encodeData = encodeURI(data)
+            window.open(encodeData);
+        }
+
+    </script>
+</body>
+
+</html>
