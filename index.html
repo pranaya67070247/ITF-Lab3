@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+    <div id="my-title" class="my-title">Pranaya</div>
+    <div class="my-profile">
+      <img
+        src="https://media.discordapp.net/attachments/674241691267497987/1295050258681827368/3824FF55-50FA-4AC1-B489-3F364205A19F.jpg?ex=670d3d0a&is=670beb8a&hm=6a795c5520ba9d30326c4ec58006b0996595ea13d1e259558695e9870e509917&=&format=webp&width=340&height=604"
+        width="183"
+        height="183"
+        id="img-profile"
+      />
+      <div class="noti">1</div>
+    </div>
+    <div class="my-panel">
+      <div class="my-grid">
+        <label for="userName"> Set the Username: </label>
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          placeholder="Enter Username"
+        />
+        <button type="button" onclick="setuserName()">SET</button>
+      </div>
+      <div class="my-grid">
+        <label for="imgURL"> Set the profile image URL: </label>
+        <input
+          type="text"
+          id="imgURL"
+          name="imgURL"
+          placeholder="Enter Image URL"
+        />
+        <button type="button" onclick="setProfile()">SET</button>
+      </div>
+    </div>
+    <div class="my-phone">
+      <label> Phone Number List </label>
+      <div class="contact">
+        <input type="text" id="addName" placeholder="Name" />
+        <input type="tel" id="addTel" placeholder="Tel" />
+        <button type="button" onclick="addContact()">ADD</button>
+        <button type="button" onclick="exportCSV()">EXPORT</button>
+      </div>
+      <div class="datalist">
+        <table id="my-table" cellspacing="0" cellpadding="0">
+          <tr class="first-tr">
+            <th width="35%">No.</th>
+            <th width="35%">Name</th>
+            <th width="30%">Phone Number</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>LoveLoveUG<3</td>
+            <td>0912345678</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

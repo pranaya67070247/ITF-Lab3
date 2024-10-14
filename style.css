@@ -1,30 +1,111 @@
-.body{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: auto;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans Thai", sans-serif;
 }
-.profile{
-    width: 300px;
-    height: 300px;
-    background-image: url(https://th.bing.com/th/id/R.4a72af51a7f821b8dcc0f43476bbed5b?rik=W%2by4FB90bY%2fz0g&pid=ImgRaw&r=0);
-    background-position: center;
-    background-size: cover;
-    border-radius: 70%;
+
+input {
+    text-align: left;
+    border: 0;
+    background-color: whitesmoke;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+button {
+    border: 0;
+    color: white;
+    background-color: rgb(109, 195, 221);
+    padding: 4px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.my-title {
+    margin-top: 32px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.my-profile {
+    margin-top: 12px;
+}
+
+.my-profile img {
+    border-radius: 360px;
+    object-fit: fill;
+}
+
+.my-profile .noti {
+    background-color: rgb(85, 189, 238);
+    width: 24px;
+    height: 24px;
+    border-radius: 360px;
     position: relative;
+    top: -36px;
+    left: 56px;
+    color: white;
+    font-size: small;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.notify{
-    width: 40px;
-    height: 40px;
-    background-color: rgb(162, 199, 230);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
+
+.my-panel {
+    margin-top: -16px;
+}
+
+.my-panel * {
+    margin: 4px 8px;
+}
+
+.my-phone {
+    margin-top: 12px;
+}
+
+.my-phone .contact {
+    margin-top: 12px;
+    width: 86%;
+    display: grid;
+    grid-template-columns: 40% 40% 10% 10%;
+}
+
+.my-phone .contact *:not(button) {
+    width: 95%;
+}
+
+.my-phone label {
+    font-weight: bold;
+}
+
+.my-phone .datalist {
+    width: 88%;
+    margin-top: 24px;
+}
+
+.my-phone .datalist table {
+    width: 100%;
+    margin: 0;
+}
+
+.my-phone .datalist table * {
+    text-align: left;
+}
+
+.my-phone .datalist th, .my-phone .datalist td {
+    padding: 6px 16px;
+}
+
+.my-phone .datalist .first-tr {
+    background-color: rgb(96, 186, 238);
+    border-bottom: 1px solid black;
+}
+
+.my-phone .datalist th {
+    border-bottom: 1px solid rgb(109, 118, 245);
+}
+
+.my-phone .datalist td {
+    border-bottom: 1px solid rgb(109, 118, 245);
 }
